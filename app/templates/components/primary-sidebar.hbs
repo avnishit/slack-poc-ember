@@ -1,0 +1,39 @@
+<div id="wrapper">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              {{#if userId}}
+<h5 class="sidebar-brand">
+    Hello {{userId}}!
+</h5>
+<li>{{#link-to "index"}}Home{{/link-to}}</li>
+<li>{{#link-to "start-conversation"}}Add a conversation{{/link-to}}</li>
+<li>
+    <a href="#">Conversations</a>
+    <ul>
+      {{#each convs as |conv|}}
+    <li>{{#link-to 'conversations' conv.title}}{{conv.title}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</li>
+<li>{{#link-to "readme"}}Readme{{/link-to}}</li>
+<li>{{#link-to 'login' }}Logout{{/link-to}}</li>
+{{else}}
+<h5 class="sidebar-brand">
+    Hi, Please log in
+</h5>
+<li>{{#link-to "index" }}<strike>Home</strike>{{/link-to}}</li>
+<li>{{#link-to "start-conversation"}}<strike>Add a conversation</strike>{{/link-to}}</li>
+<li>
+    <a href="#"><strike>Conversations</strike></a>
+    <ul>
+      {{#each convs as |conv|}}
+    <li>{{#link-to 'conversations' conv.title}}{{conv.title}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</li>
+<li>{{#link-to "readme"}}Readme{{/link-to}}</li>
+<li>{{#link-to "login" }}Login{{/link-to}}</li>
+{{/if}}
+</ul>
+</div>
+</div>

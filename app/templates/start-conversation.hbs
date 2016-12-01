@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-6 ">
+        {{primary-sidebar userId=model.user convs=model.convs}}
+      </div>
+        <div class="col-lg-8 col-md-8 col-xs-6 ">
+
+					<div class=row>
+						<div class="col-lg-6 col-md-6 col-xs-12 ">
+					  <div style="padding: 20px;" id="form-olvidado">
+							<h4>
+						    Create a new Coversation Channel
+						  </h4>
+					  <form {{action 'addConv' convname model on='submit'}}>
+					      <fieldset>
+					        <div class="form-group input-group">
+					          {{input value=convname class='form-control' placeholder='Conversation Title' id='add-conv-input' required=''}}
+					        </div>
+					        <div class="form-group">
+					          <button type="submit" class="btn btn-primary btn-block">
+					            Create
+					          </button>
+					        </div>
+					      </fieldset>
+					    </form>
+					  </div>
+					</div>
+        </div>
+			</div>
+      </div>
+    </div>
+
+{{outlet}}

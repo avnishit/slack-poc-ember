@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-6 ">
+        {{primary-sidebar userId=model.user convs=model.convs newconvs=model.newconvs}}
+      </div>
+        <div class="col-lg-6 col-md-6 col-xs-6 ">
+              <div class="panel panel-default">
+                <div class="panel-heading">{{model.conv.title}}</div>
+                <div class="panel-body">
+                  <div class="container">
+                    {{#each model.conv.msgs as |message|}}
+                      <div class="row message-bubble">
+                          <p class="text-muted">{{message.timestamp}}:{{message.author}}</p>
+                          <span>{{message.text}}</span>
+                      </div>
+                  {{/each}}
+                  </div>
+                  <div class="panel-footer">
+                       <div class="input-group">
+                        {{input class='form-control' placeholder='Your message' type='text' value=textMessageFromInput}}
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-default" {{action 'postMessage' textMessageFromInput model}}>Send</button>
+                        </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-lg-2 col-md-3 ">
+
+        </div>
+      </div>
+    </div>

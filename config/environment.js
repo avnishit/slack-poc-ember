@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'slack-clone',
-    environment: environment,
+    environment: 'development',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

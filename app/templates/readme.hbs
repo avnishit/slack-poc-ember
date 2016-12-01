@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-6 ">
+        {{#if model.user}}
+        {{primary-sidebar userId=model.user convs=model.convs}}
+        {{else}}
+        {{primary-sidebar userId=model.user }}
+        {{/if}}
+      </div>
+        <div class="col-lg-8 col-md-8 col-xs-6 ">
+          <p>This is  demo app & a work in progress.
+          You can start a new converstaion
+          Join Existing conversions
+          Read Write Messages to conversations
+          & try your best to crash this app. Let me know if you succeed</p>
+          <p>App runs on a dummy bankend, and hence any new coversation channels & message you create
+            will not exist once app reloads. However logins persists as it is stored in Cookies.
+          App also comes built a few dummy conversations channels and mrssages that you can see , once logged in</p>
+
+        </div>
+      </div>
+    </div>
+
+{{outlet}}

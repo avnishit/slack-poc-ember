@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('readme');
+  this.route('conversations',{path:'/conversations/:conv_name'});
+  this.route('start-conversation');
+  this.route('error',{ path: '/*path' });
 });
 
 export default Router;

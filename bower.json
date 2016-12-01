@@ -2,6 +2,8 @@
   "name": "slack-clone",
   "dependencies": {
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember-cli-shims": "0.1.1",
+    "js-cookie": "^2.0.4",
+    "bootstrap": "~3.3.5"
   }
 }

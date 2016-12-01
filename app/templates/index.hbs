@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-6 ">
+        {{primary-sidebar userId=model.user convs=model.convs}}
+      </div>
+        <div class="col-lg-8 col-md-8 col-xs-6 ">
+          {{#if model.user}}
+              <h4>Dear {{model.user}}!</h4>
+              <h5>Please start a new coversation by adding one , or join existing by cliking on them</h5>
+          {{else}}
+          <!--We Should not hit this case-->
+              <p>Please enter your nickname and click the join button.</p>
+              {{#link-to 'login' name class="btn btn-lg btn-success"}}Login{{/link-to}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+{{outlet}}
