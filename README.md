@@ -1,6 +1,6 @@
 # Slack-clone
 
-This README outlines install and how to use slack-poc-ember.
+This README outlines how to install and use slack-poc-ember.
 
 ## Prerequisites
 
